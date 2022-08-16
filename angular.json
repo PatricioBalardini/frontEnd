@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "proyecto-integrador": {
+    "proyectoFinal": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/proyecto-integrador",
+            "outputPath": "dist/proyecto-final",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,10 +28,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "node_modules/popper.js/dist/umd/popper.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -67,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "proyecto-integrador:build:production"
+              "browserTarget": "proyectoFinal:build:production"
             },
             "development": {
-              "browserTarget": "proyecto-integrador:build:development"
+              "browserTarget": "proyectoFinal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "proyecto-integrador:build"
+            "browserTarget": "proyectoFinal:build"
           }
         },
         "test": {
@@ -93,19 +97,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/popper.js/dist/umd/popper.min.js"
-            ]
+            "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "5baa6a43-40db-43c1-9e6e-7b0aada17623"
   }
 }
