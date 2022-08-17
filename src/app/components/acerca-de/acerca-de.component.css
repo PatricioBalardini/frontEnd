@@ -2,7 +2,7 @@
   padding: 20px;
 }
 div {
-  background-color: rgba(0, 0, 0, 0.973);
+  background-color: rgb(0 0 0);;
   text-align: center;
 }
 /*Estilo de la foto de perfil*/
@@ -31,4 +31,12 @@ div {
 #nombre {
   font-weight: bold;
   margin-top: 30%;
+}
+
+p, h1, h4 {
+  color: #e9ecef;
+}
+
+p {
+  color: #727a82;
 }
