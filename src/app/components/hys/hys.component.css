@@ -1,8 +1,11 @@
 .row{
-  background-color: rgba(0, 0, 0);
+  background-color: #85003c;
   padding: 20px;
+  text-align: center;
+
 }
 
 h2{
-  color: #e9ecef;
+  color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
