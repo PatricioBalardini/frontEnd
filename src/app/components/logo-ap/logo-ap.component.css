@@ -7,13 +7,14 @@
   margin-right: 0.5em;
 }
 #logoAP{
-  width: 150px;
+  width: 130px;
 }
 img{
-  width: 50px;
+  width: 35px;
+
 }
 .btn{
-  border-width: medium;
+  border-width: small;
 }
 
 /*--- Para la vista de celular ---*/
