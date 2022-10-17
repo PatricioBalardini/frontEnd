@@ -1,5 +1,5 @@
 .row {
-  padding: 20px;
+  padding: 10px;
 }
 div {
   background-color: rgb(0 ,0 ,0);
@@ -9,11 +9,11 @@ div {
 @media (min-width: 576px) {
   #fotodeperfil {
     position: absolute;
-    width: 15%;
-    border-radius: 10%;
-    box-shadow: 1px 1px 1px #141619;
+    width: 13%;
+    border-radius: 3%;
+    box-shadow: 1px 1px 1px #7a889c;
     left: 3%;
-    top: 550px;
+    top: 750px;
   }
 }
 @media (max-width: 575px) {
@@ -21,7 +21,7 @@ div {
     position: absolute;
     width: 15%;
     border-radius: 10%;
-    box-shadow: 1px 1px 1px #141619;
+    box-shadow: 1px 1px 1px #636d7d;
     left: 33%;
     top: 950px;
   }
@@ -35,10 +35,10 @@ div {
 
 p, h1, h4 {
   color: #e9ecef;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 p {
   color: #727a82;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .redes{
   margin-right: 0.5em;
@@ -11,13 +12,13 @@
 }
 img{
   width: 35px;
-
 }
 .btn{
   border-width: small;
+
 }
 
-/*--- Para la vista de celular ---*/
+/*--- vista de celular ---*/
 @media (max-width: 575px){
   .container{
       flex-direction: column;

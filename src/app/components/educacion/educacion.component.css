@@ -2,12 +2,12 @@
   padding: 20px;
 }
 div{
-  background: #85003c;
+  background:rgb(0 ,0 ,0);
   text-align: center;
 }
 h1, h2, h3{
   display: inline;
-  color: #000000;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #f6f6f6;
+  font-family: 'Josefin Sans', sans-serif;
 
 }
