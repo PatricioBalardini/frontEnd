@@ -11,7 +11,7 @@ div {
     position: absolute;
     width: 13%;
     border-radius: 3%;
-    box-shadow: 1px 1px 1px #7a889c;
+    /* box-shadow: 1px 1px 1px #7a889c; */
     left: 3%;
     top: 750px;
   }
