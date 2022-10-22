@@ -1,10 +1,13 @@
 .gradient-custom {
   /* fallback for old browsers */
-  background: #85003c;
+  background: rgb(17, 17, 17);
+  font-family: 'Josefin Sans', sans-serif;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #85003c(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  background: -webkit-linear-gradient(to right, #000000(106, 17, 203, 1), rgb(67, 90, 130));
+  font-family: 'Josefin Sans', sans-serif;
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #85003c(106, 17, 203, 1), rgb(29, 28, 28));
+  background: linear-gradient(to right,rgb(67, 90, 130), rgb(29, 28, 28));
+  font-family: 'Josefin Sans', sans-serif;
   }

@@ -1,10 +1,10 @@
 export class Experiencia {
   id? : number;
-  nombreE : string;
-  descripcionE : string;
+  nombre : string;
+  descripcion : string;
 
-  constructor(nombreE: string, descripcionE: string){
-      this.nombreE = nombreE;
-      this.descripcionE = descripcionE;
+  constructor(nombre: string, descripcion: string){
+      this.nombre = nombre;
+      this.descripcion = descripcion;
   }
 }

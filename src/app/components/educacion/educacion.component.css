@@ -2,12 +2,8 @@
   padding: 20px;
 }
 div{
-  background:rgb(0 ,0 ,0);
-  text-align: center;
+  background: #a1b5cb;
 }
-h1, h2, h3{
+h1, h3{
   display: inline;
-  color: #f6f6f6;
-  font-family: 'Josefin Sans', sans-serif;
-
 }

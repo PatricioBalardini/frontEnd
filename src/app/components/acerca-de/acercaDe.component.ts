@@ -4,8 +4,8 @@ import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-acerca-de',
-  templateUrl: './acerca-de.component.html',
-  styleUrls: ['./acerca-de.component.css']
+  templateUrl: './acercaDe.component.html',
+  styleUrls: ['./acercaDe.component.css']
 })
 export class AcercaDeComponent implements OnInit {
   persona: persona = new persona("","","");
@@ -16,4 +16,4 @@ export class AcercaDeComponent implements OnInit {
     this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
 
-} 
+}
