@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencias';
-import { SExperienciaService } from 'src/app/service/experiencia.service';
+import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
   selector: 'app-newExperiencia',
@@ -9,19 +9,19 @@ import { SExperienciaService } from 'src/app/service/experiencia.service';
   styleUrls: ['./newExperiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit {
-  nombre: string = '';
-  descripcion: string = '';
+  nombre: string;
+  descripcion: string;
 
-  constructor(private sExperiencia: SExperienciaService, private router: Router) { }
+  constructor(private ExperienciaService: ExperienciaService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombre, this.descripcion);
-    this.sExperiencia.save(expe).subscribe(
+    const experiencia = new Experiencia(this.nombre, this.descripcion);
+    this.ExperienciaService.save(experiencia).subscribe(
       data => {
-        alert("Experiencia añadida");
+        alert("Experiencia añadida correctamente");
         this.router.navigate(['']);
       }, err => {
         alert("Falló");
