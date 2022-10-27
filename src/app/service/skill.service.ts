@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = environment.URL +'/skill/';
+  URL = environment.URL +'/list/';
 
   constructor(private httpClient: HttpClient) { }
 
