@@ -12,14 +12,14 @@ export class NewEducacionComponent implements OnInit {
   nombre: string;
   descripcion: string;
 
-  constructor(private EducacionService: EducacionService, private router: Router) { }
+  constructor(private educacionService: EducacionService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
     const educacion = new Educacion(this.nombre, this.descripcion);
-    this.EducacionService.save(educacion).subscribe(
+    this.educacionService.save(educacion).subscribe(
       data => {
         alert("Educacion añadida correctamente");
         this.router.navigate(['']);

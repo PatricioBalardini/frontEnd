@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { persona } from 'src/app/model/persona.model';
+import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
-  selector: 'app-acerca-de',
+  selector: 'app-acercaDe',
   templateUrl: './acercaDe.component.html',
   styleUrls: ['./acercaDe.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  persona: persona = new persona("","","");
+  persona: Persona = new Persona("","","");
 
   constructor(public personaService: PersonaService) { }
 
