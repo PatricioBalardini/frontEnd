@@ -4,9 +4,9 @@ import { Experiencia } from 'src/app/model/experiencias';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-editExperiencia',
-  templateUrl: './editExperiencia.component.html',
-  styleUrls: ['./editExperiencia.component.css']
+  selector: 'app-edit-experiencia',
+  templateUrl: './edit-experiencia.component.html',
+  styleUrls: ['./edit-experiencia.component.css']
 })
 export class EditExperienciaComponent implements OnInit {
   experiencia: Experiencia = null;

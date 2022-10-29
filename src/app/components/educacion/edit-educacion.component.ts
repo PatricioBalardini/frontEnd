@@ -4,9 +4,9 @@ import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
 
 @Component({
-  selector: 'app-editEducacion',
-  templateUrl: './editEducacion.component.html',
-  styleUrls: ['./editEducacion.component.css']
+  selector: 'app-edit-educacion',
+  templateUrl: './edit-educacion.component.html',
+  styleUrls: ['./edit-educacion.component.css']
 })
 export class EditEducacionComponent implements OnInit {
   educacion: Educacion = null;
@@ -40,5 +40,4 @@ export class EditEducacionComponent implements OnInit {
       }
     )
   }
-
 }

@@ -4,9 +4,9 @@ import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
-  selector: 'app-newSkill',
-  templateUrl: './newSkill.component.html',
-  styleUrls: ['./newSkill.component.css']
+  selector: 'app-new-skill',
+  templateUrl: './new-skill.component.html',
+  styleUrls: ['./new-skill.component.css']
 })
 export class NewSkillComponent implements OnInit {
   nombre: string;
