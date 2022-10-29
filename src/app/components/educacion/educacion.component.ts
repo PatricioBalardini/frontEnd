@@ -25,7 +25,7 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion(): void{
-    this.educacionService.lista().subscribe(
+    this.educacionService.list().subscribe(
       data => {
         this.educacion = data;
       }

@@ -25,7 +25,7 @@ export class HysComponent implements OnInit {
   }
 
   cargarSkills(): void {
-    this.skillS.lista().subscribe(
+    this.skillS.list().subscribe(
       data => {
         this.skill = data;
       }
