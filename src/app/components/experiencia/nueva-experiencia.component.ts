@@ -4,11 +4,11 @@ import { Experiencia } from 'src/app/model/experiencias';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-new-experiencia',
-  templateUrl: './new-experiencia.component.html',
-  styleUrls: ['./new-experiencia.component.css']
+  selector: 'app-nueva-experiencia',
+  templateUrl: './nueva-experiencia.component.html',
+  styleUrls: ['./nueva-experiencia.component.css']
 })
-export class NewExperienciaComponent implements OnInit {
+export class NuevaExperienciaComponent implements OnInit {
   nombre: string;
   descripcion: string;
 
@@ -19,12 +19,12 @@ export class NewExperienciaComponent implements OnInit {
 
   onCreate(): void {
     const experiencia = new Experiencia(this.nombre, this.descripcion);
-    this.ExperienciaService.save(experiencia).subscribe(
+    this.ExperienciaService.guardar(experiencia).subscribe(
       data => {
         alert("Experiencia añadida correctamente");
         this.router.navigate(['']);
       }, err => {
-        alert("Falló");
+        alert("Error al añadir la experiencia");
         this.router.navigate(['']);
       }
     )

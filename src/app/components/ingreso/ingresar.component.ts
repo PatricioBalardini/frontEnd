@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginUsuario } from 'src/app/model/login-usuario';
+import { IngresarUsuario } from 'src/app/model/ingresar-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-ingresar',
+  templateUrl: './ingresar.component.html',
+  styleUrls: ['./ingresar.component.css']
 })
 
-export class LoginComponent implements OnInit {
+export class IngresarComponent implements OnInit {
   isLogged = false;
   isLogginFail = false;
-  loginUsuario!: LoginUsuario;
+  ingresarUsuario!: IngresarUsuario;
   nombreUsuario!: string;
   password! : string;
   roles: string[] = [];
@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(): void{
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.login(this.loginUsuario).subscribe(data =>{
+    this.ingresarUsuario = new IngresarUsuario(this.nombreUsuario, this.password);
+    this.authService.ingresar(this.ingresarUsuario).subscribe(data =>{
         this.isLogged = true;
         this.isLogginFail = false;
         this.tokenService.setToken(data.token);

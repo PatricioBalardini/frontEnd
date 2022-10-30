@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
-import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
-import { NewEducacionComponent } from './components/educacion/new-educacion.component';
-import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de.component';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
+import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
 import { HomeComponent } from './components/home/home.component';
-import { EditSkillComponent } from './components/hys/edit-skill.component';
-import { NewSkillComponent } from './components/hys/new-skill.component';
-import { LoginComponent } from './components/login/login.component';
+import { EditarSkillComponent } from './components/hys/editar-skill.component';
+import { NuevaSkillComponent } from './components/hys/nueva-skill.component';
+import { IngresarComponent } from './components/ingreso/ingresar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'nuevaexperiencia', component: NewExperienciaComponent},
-  { path: 'editexperiencia/:id', component: EditExperienciaComponent},
-  { path: 'nuevaeducacion', component: NewEducacionComponent},
-  { path: 'editeducacion/:id', component: EditEducacionComponent},
-  { path: 'newskill', component: NewSkillComponent},
-  { path: 'editskill/:id', component: EditSkillComponent},
-  { path: 'editacercade/:id', component: EditAcercaDeComponent}
+  { path: 'ingresar', component: IngresarComponent },
+  { path: 'nuevaexperiencia', component: NuevaExperienciaComponent},
+  { path: 'editarexperiencia/:id', component: EditarExperienciaComponent},
+  { path: 'nuevaeducacion', component: NuevaEducacionComponent},
+  { path: 'editareducacion/:id', component: EditarEducacionComponent},
+  { path: 'nuevaskill', component: NuevaSkillComponent},
+  { path: 'editarskill/:id', component: EditarSkillComponent},
+  { path: 'editaracercade/:id', component: EditarAcercaDeComponent}
 ];
 
 @NgModule({

@@ -25,7 +25,7 @@ export class LogoAPComponent implements OnInit {
     window.location.reload();
   }
 
-  login(){
-    this.router.navigate(['/login'])
+  ingresar(){
+    this.router.navigate(['/ingresar'])
   }
 }

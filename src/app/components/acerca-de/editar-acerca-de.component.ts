@@ -6,10 +6,10 @@ import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-edit-acerca-de',
-  templateUrl: './edit-acerca-de.component.html',
-  styleUrls: ['./edit-acerca-de.component.css']
+  templateUrl: './editar-acerca-de.component.html',
+  styleUrls: ['./editar-acerca-de.component.css']
 })
-export class EditAcercaDeComponent implements OnInit {
+export class EditarAcercaDeComponent implements OnInit {
   persona: Persona = null;
 
   constructor(private activatedRouter: ActivatedRoute,
@@ -19,7 +19,7 @@ export class EditAcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.personaService.detail(id).subscribe(
+    this.personaService.detalles(id).subscribe(
       data =>{
         this.persona = data;
       }, err =>{
@@ -31,7 +31,8 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.personaService.update(id, this.persona).subscribe(
+    this.persona.img = this.imageService.url
+    this.personaService.actualizar(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

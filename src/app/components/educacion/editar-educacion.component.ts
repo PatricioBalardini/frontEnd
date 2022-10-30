@@ -4,11 +4,11 @@ import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
 
 @Component({
-  selector: 'app-edit-educacion',
-  templateUrl: './edit-educacion.component.html',
-  styleUrls: ['./edit-educacion.component.css']
+  selector: 'app-editar-educacion',
+  templateUrl: './editar-educacion.component.html',
+  styleUrls: ['./editar-educacion.component.css']
 })
-export class EditEducacionComponent implements OnInit {
+export class EditarEducacionComponent implements OnInit {
   educacion: Educacion = null;
 
   constructor(
@@ -19,7 +19,7 @@ export class EditEducacionComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionService.detail(id).subscribe(
+    this.educacionService.detalles(id).subscribe(
       data =>{
         this.educacion = data;
       }, err =>{
@@ -31,7 +31,7 @@ export class EditEducacionComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionService.update(id, this.educacion).subscribe(
+    this.educacionService.actualizar(id, this.educacion).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

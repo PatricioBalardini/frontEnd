@@ -4,11 +4,11 @@ import { Experiencia } from 'src/app/model/experiencias';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-edit-experiencia',
-  templateUrl: './edit-experiencia.component.html',
-  styleUrls: ['./edit-experiencia.component.css']
+  selector: 'app-editar-experiencia',
+  templateUrl: './editar-experiencia.component.html',
+  styleUrls: ['./editar-experiencia.component.css']
 })
-export class EditExperienciaComponent implements OnInit {
+export class EditarExperienciaComponent implements OnInit {
   experiencia: Experiencia = null;
 
   constructor(
@@ -19,7 +19,7 @@ export class EditExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.experienciaService.detail(id).subscribe(
+    this.experienciaService.detalles(id).subscribe(
       data =>{
         this.experiencia = data;
       }, err =>{
@@ -31,7 +31,7 @@ export class EditExperienciaComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.experienciaService.update(id, this.experiencia).subscribe(
+    this.experienciaService.actualizar(id, this.experiencia).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{

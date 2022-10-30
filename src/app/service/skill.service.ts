@@ -12,24 +12,24 @@ export class SkillService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public list(): Observable<Skill[]> {
-    return this.httpClient.get<Skill[]>(this.URL = 'list');
+  public lista(): Observable<Skill[]> {
+    return this.httpClient.get<Skill[]>(this.URL = 'lista');
 
   }
 
-  public detail(id: number): Observable<Skill>{
-    return this.httpClient.get<Skill>(this.URL + `detail/${id}`);
+  public detalles(id: number): Observable<Skill>{
+    return this.httpClient.get<Skill>(this.URL + `detalles/${id}`);
   }
 
-  public save(skill: Skill): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', skill);
+  public guardar(skill: Skill): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'crear', skill);
   }
 
-  public update(id: number, skill: Skill): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, skill);
+  public actualizar(id: number, skill: Skill): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `actualizar/${id}`, skill);
   }
 
-  public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  public borrar(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
   }
 }

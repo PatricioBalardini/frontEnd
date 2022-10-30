@@ -4,11 +4,11 @@ import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
-  selector: 'app-edit-skill',
-  templateUrl: './edit-skill.component.html',
-  styleUrls: ['./edit-skill.component.css']
+  selector: 'app-editar-skill',
+  templateUrl: './editar-skill.component.html',
+  styleUrls: ['./editar-skill.component.css']
 })
-export class EditSkillComponent implements OnInit {
+export class EditarSkillComponent implements OnInit {
   skill: Skill = null;
 
   constructor(
@@ -18,7 +18,7 @@ export class EditSkillComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillS.detail(id).subscribe(
+    this.skillS.detalles(id).subscribe(
       data => {
         this.skill = data;
       }, err => {
@@ -30,7 +30,7 @@ export class EditSkillComponent implements OnInit {
 
   onUpdate(){
     const id = this.activatedRouter.snapshot.params['id'];
-    this.skillS.update(id, this.skill).subscribe(
+    this.skillS.actualizar(id, this.skill).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {

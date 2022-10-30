@@ -25,16 +25,16 @@ export class HysComponent implements OnInit {
   }
 
   cargarSkills(): void {
-    this.skillS.list().subscribe(
+    this.skillS.lista().subscribe(
       data => {
         this.skill = data;
       }
     )
   }
 
-  delete(id: number) {
+  borrar(id: number) {
     if(id != undefined) {
-      this.skillS.delete(id).subscribe(
+      this.skillS.borrar(id).subscribe(
         data => {
           this.cargarSkills();
         }, err => {

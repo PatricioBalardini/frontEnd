@@ -16,15 +16,15 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
+import { IngresarComponent } from './components/ingreso/ingresar.component';
 import { interceptorProvider } from './service/interceptor-service';
-import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
-import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
-import { NewEducacionComponent } from './components/educacion/new-educacion.component';
-import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
-import { EditSkillComponent } from './components/hys/edit-skill.component';
-import { NewSkillComponent } from './components/hys/new-skill.component';
-import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
+import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
+import { EditarEducacionComponent } from './components/educacion/editar-educacion.component';
+import { EditarSkillComponent } from './components/hys/editar-skill.component';
+import { NuevaSkillComponent } from './components/hys/nueva-skill.component';
+import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
@@ -42,14 +42,14 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     ProyectoComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
-    NewExperienciaComponent,
-    EditExperienciaComponent,
-    NewEducacionComponent,
-    EditEducacionComponent,
-    EditSkillComponent,
-    NewSkillComponent,
-    EditAcercaDeComponent,
+    IngresarComponent,
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent,
+    NuevaEducacionComponent,
+    EditarEducacionComponent,
+    EditarSkillComponent,
+    NuevaSkillComponent,
+    EditarAcercaDeComponent,
   ],
   imports: [
     BrowserModule,

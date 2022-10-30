@@ -25,7 +25,7 @@ export class ExperienciaComponent implements OnInit {
   }
 
   cargarExperiencia(): void {
-    this.experienciaService.list().subscribe(
+    this.experienciaService.lista().subscribe(
       data => {
         this.experiencia = data;
       }
@@ -34,7 +34,7 @@ export class ExperienciaComponent implements OnInit {
 
   delete(id?: number){
     if(id != undefined){
-      this.experienciaService.delete(id).subscribe(
+      this.experienciaService.borrar(id).subscribe(
         data => {
           this.cargarExperiencia();
         }, err => {

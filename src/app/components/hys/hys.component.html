@@ -2,7 +2,7 @@
 
   <h2>Hard & Soft skills</h2>
   <div class="col-lg-2">
-    <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+    <button type="button" routerLink="/nuevaskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
   </div>
   <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
     <circle-progress
@@ -25,12 +25,12 @@
       [animationDuration]="1000"
     ></circle-progress>
     <td *ngIf="isLogged">
-      <button class="btn btn-light" routerLink="/edithya/{{ skill.id }}">
+      <button class="btn btn-light" routerLink="/editarhys/{{ skill.id }}">
         <i class="bi bi-pencil-fill"></i>
       </button>
     </td>
     <td *ngIf="isLogged">
-      <button class="btn btn-danger" (click)="delete(skill.id)">
+      <button class="btn btn-danger" (click)="borrar(skill.id)">
         <i class="bi bi-trash-fill"></i> BORRAR
       </button>
     </td>
