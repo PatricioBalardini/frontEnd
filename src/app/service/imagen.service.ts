@@ -5,7 +5,7 @@ import { getDownloadURL, list, uploadBytes } from 'firebase/storage';
 @Injectable({
   providedIn: 'root',
 })
-export class ImageService {
+export class ImagenService {
   url: string = '';
   constructor(private storage: Storage) {}
 
@@ -20,7 +20,7 @@ export class ImageService {
   }
 
   getImages() {
-    const imagesRef = ref(this.storage, 'image');
+    const imagesRef = ref(this.storage, 'imagen');
     list(imagesRef)
       .then(async (response) => {
         for (let item of response.items) {
