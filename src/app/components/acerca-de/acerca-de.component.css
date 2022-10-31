@@ -5,11 +5,10 @@
 }
 button {
   text-align: right;
-
 }
 div {
   background-color: rgb(17, 17, 17);
-  /*text-align: center;*/
+  text-align: center;
 }
 /*Estilo de la foto de perfil*/
 @media (min-width: 576px) {
@@ -17,32 +16,42 @@ div {
     position: absolute;
     width: 13%;
     border-radius: 3%;
-    /* box-shadow: 1px 1px 1px #7a889c; */
+    box-shadow: 1px 1px 1px #17181a;
     left: 3%;
-    top: 750px;
+    top: 800px;
   }
 }
 @media (max-width: 575px) {
   #fotodeperfil {
-    position: absolute;
-    width: 15%;
+    position: center;
+    width: 40%;
     border-radius: 10%;
     box-shadow: 1px 1px 1px #636d7d;
     left: 33%;
-    top: 950px;
+    vertical-align: text-top;
+
   }
 }
 
 /*etiqueta nombre*/
 #nombre {
   font-weight: bold;
-  margin-top: 30%;
+  margin-top: 5%;
 }
 
-p,
-h1,
-h4 {
+h1 {
   color: #e9ecef;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+}
+h2 {
+  color: #e9ecef;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 23px;
+}
+
+h4 {
+  color: #878a8d;
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
 }
