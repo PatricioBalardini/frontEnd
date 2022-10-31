@@ -6,27 +6,30 @@ import { EducacionService } from 'src/app/service/educacion.service';
 @Component({
   selector: 'app-nueva-educacion',
   templateUrl: './nueva-educacion.component.html',
-  styleUrls: ['./nueva-educacion.component.css']
+  styleUrls: ['./nueva-educacion.component.css'],
 })
 export class NuevaEducacionComponent implements OnInit {
   nombre: string;
   descripcion: string;
 
-  constructor(private educacionService: EducacionService, private router: Router) { }
+  constructor(
+    private educacionService: EducacionService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onCreate(): void {
     const educacion = new Educacion(this.nombre, this.descripcion);
     this.educacionService.guardar(educacion).subscribe(
-      data => {
-        alert("Educacion añadida correctamente");
+      (data) => {
+        alert('Educacion añadida correctamente');
         this.router.navigate(['']);
-      }, err => {
-        alert("Error al añadir la educacion");
+      },
+      (err) => {
+        alert('Error al añadir la educacion');
         this.router.navigate(['']);
       }
-    )
+    );
   }
 }

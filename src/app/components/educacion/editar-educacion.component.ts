@@ -6,7 +6,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
 @Component({
   selector: 'app-editar-educacion',
   templateUrl: './editar-educacion.component.html',
-  styleUrls: ['./editar-educacion.component.css']
+  styleUrls: ['./editar-educacion.component.css'],
 })
 export class EditarEducacionComponent implements OnInit {
   educacion: Educacion = null;
@@ -15,29 +15,31 @@ export class EditarEducacionComponent implements OnInit {
     private educacionService: EducacionService,
     private activatedRouter: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionService.detalles(id).subscribe(
-      data =>{
+      (data) => {
         this.educacion = data;
-      }, err =>{
-        alert("Error al modificar");
+      },
+      (err) => {
+        alert('Error al modificar');
         this.router.navigate(['']);
       }
-    )
+    );
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionService.actualizar(id, this.educacion).subscribe(
-      data => {
+      (data) => {
         this.router.navigate(['']);
-      }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
+      },
+      (err) => {
+        alert('Error al modificar');
+        this.router.navigate(['']);
       }
-    )
+    );
   }
 }

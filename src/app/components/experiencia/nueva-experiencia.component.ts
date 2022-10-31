@@ -6,28 +6,30 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 @Component({
   selector: 'app-nueva-experiencia',
   templateUrl: './nueva-experiencia.component.html',
-  styleUrls: ['./nueva-experiencia.component.css']
+  styleUrls: ['./nueva-experiencia.component.css'],
 })
 export class NuevaExperienciaComponent implements OnInit {
   nombre: string;
   descripcion: string;
 
-  constructor(private ExperienciaService: ExperienciaService, private router: Router) { }
+  constructor(
+    private ExperienciaService: ExperienciaService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onCreate(): void {
     const experiencia = new Experiencia(this.nombre, this.descripcion);
     this.ExperienciaService.guardar(experiencia).subscribe(
-      data => {
-        alert("Experiencia añadida correctamente");
+      (data) => {
+        alert('Experiencia añadida correctamente');
         this.router.navigate(['']);
-      }, err => {
-        alert("Error al añadir la experiencia");
+      },
+      (err) => {
+        alert('Error al añadir la experiencia');
         this.router.navigate(['']);
       }
-    )
+    );
   }
-
 }

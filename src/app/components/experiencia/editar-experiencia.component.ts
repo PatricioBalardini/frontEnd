@@ -6,7 +6,7 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 @Component({
   selector: 'app-editar-experiencia',
   templateUrl: './editar-experiencia.component.html',
-  styleUrls: ['./editar-experiencia.component.css']
+  styleUrls: ['./editar-experiencia.component.css'],
 })
 export class EditarExperienciaComponent implements OnInit {
   experiencia: Experiencia = null;
@@ -15,30 +15,31 @@ export class EditarExperienciaComponent implements OnInit {
     private experienciaService: ExperienciaService,
     private activatedRouter: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.experienciaService.detalles(id).subscribe(
-      data =>{
+      (data) => {
         this.experiencia = data;
-      }, err =>{
-        alert("Error al modificar experiencia");
+      },
+      (err) => {
+        alert('Error al modificar experiencia');
         this.router.navigate(['']);
       }
-    )
+    );
   }
 
-  onUpdate(): void{
+  onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.experienciaService.actualizar(id, this.experiencia).subscribe(
-      data => {
+      (data) => {
         this.router.navigate(['']);
-      }, err =>{
-         alert("Error al modificar experiencia");
-         this.router.navigate(['']);
+      },
+      (err) => {
+        alert('Error al modificar experiencia');
+        this.router.navigate(['']);
       }
-    )
+    );
   }
-
 }

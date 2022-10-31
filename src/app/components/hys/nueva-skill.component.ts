@@ -6,27 +6,30 @@ import { SkillService } from 'src/app/service/skill.service';
 @Component({
   selector: 'app-nueva-skill',
   templateUrl: './nueva-skill.component.html',
-  styleUrls: ['./nueva-skill.component.css']
+  styleUrls: ['./nueva-skill.component.css'],
 })
 export class NuevaSkillComponent implements OnInit {
   nombre: string;
   porcentaje: number;
 
-  constructor(private skillS: SkillService, private router: Router) { }
+  constructor(
+    private skillService: SkillService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onCreate(): void {
     const skill = new Skill(this.nombre, this.porcentaje);
-    this.skillS.guardar(skill).subscribe(
-      data => {
-        alert("Skill creada correctamente");
+    this.skillService.guardar(skill).subscribe(
+      (data) => {
+        alert('Skill creada correctamente');
         this.router.navigate(['']);
-      }, err =>{
-        alert("Error al añadir la skill");
+      },
+      (err) => {
+        alert('Error al añadir la skill');
         this.router.navigate(['']);
       }
-    )
+    );
   }
 }

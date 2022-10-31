@@ -5,31 +5,30 @@ import { environment } from 'src/environments/environment';
 import { Skill } from '../model/skill';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SkillService {
-  URL = environment.URL +'skill/';
+  URL = environment.URL + 'skill/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   public lista(): Observable<Skill[]> {
-    return this.httpClient.get<Skill[]>(this.URL = 'lista');
-
+    return this.httpClient.get<Skill[]>(this.URL + 'lista');
   }
 
-  public detalles(id: number): Observable<Skill>{
+  public detalles(id: number): Observable<Skill> {
     return this.httpClient.get<Skill>(this.URL + `detalles/${id}`);
   }
 
-  public guardar(skill: Skill): Observable<any>{
+  public guardar(skill: Skill): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'crear', skill);
   }
 
-  public actualizar(id: number, skill: Skill): Observable<any>{
+  public actualizar(id: number, skill: Skill): Observable<any> {
     return this.httpClient.put<any>(this.URL + `actualizar/${id}`, skill);
   }
 
-  public borrar(id: number): Observable<any>{
+  public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
   }
 }

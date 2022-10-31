@@ -6,13 +6,15 @@ import { TokenService } from 'src/app/service/token.service';
 @Component({
   selector: 'app-acerca-de',
   templateUrl: './acerca-de.component.html',
-  styleUrls: ['./acerca-de.component.css']
+  styleUrls: ['./acerca-de.component.css'],
 })
 export class AcercaDeComponent implements OnInit {
   persona: Persona = null;
 
-  constructor(public personaService: PersonaService,
-    private tokenService: TokenService) { }
+  constructor(
+    public personaService: PersonaService,
+    private tokenService: TokenService
+  ) {}
 
   isLogged = false;
 
@@ -26,8 +28,8 @@ export class AcercaDeComponent implements OnInit {
   }
 
   cargarPersona() {
-    this.personaService.detalles(1).subscribe(data =>
-      {this.persona = data}
-      )
+    this.personaService.detalles(1).subscribe((data) => {
+      this.persona = data;
+    });
   }
 }

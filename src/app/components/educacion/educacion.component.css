@@ -1,25 +1,25 @@
-.row{
+.row {
   padding: 20px;
-  background-color:rgb(17, 17, 17);
+  background-color: rgb(17, 17, 17);
   text-align: center;
 }
 
-.contenedor{
+.contenedor {
   width: auto;
 }
 
-
-p{
+p {
   color: #727a82;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   text-align: center;
-
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   display: inline;
   color: #ffffff;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 25px;
 }

@@ -1,13 +1,13 @@
-.row{
+.row {
   background: rgb(17, 17, 17);
 }
 
-footer{
+footer {
   color: #f6f6f6;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   text-align: center;
   box-shadow: 1px -0.3px 1px rgb(221, 221, 221);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }

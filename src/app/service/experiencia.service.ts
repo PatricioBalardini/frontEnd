@@ -5,30 +5,30 @@ import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencias';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ExperienciaService {
-  URL = environment.URL +'experiencialaboral/';
+  URL = environment.URL + 'experiencialaboral/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
-  public lista(): Observable<Experiencia[]>{
+  public lista(): Observable<Experiencia[]> {
     return this.httpClient.get<Experiencia[]>(this.URL + 'lista');
   }
 
-  public detalles(id: number): Observable<Experiencia>{
+  public detalles(id: number): Observable<Experiencia> {
     return this.httpClient.get<Experiencia>(this.URL + `detalles/${id}`);
   }
 
-  public guardar(experiencia: Experiencia): Observable<any>{
+  public guardar(experiencia: Experiencia): Observable<any> {
     return this.httpClient.post<any>(this.URL + 'crear', experiencia);
   }
 
-  public actualizar(id: number, experiencia: Experiencia): Observable<any>{
+  public actualizar(id: number, experiencia: Experiencia): Observable<any> {
     return this.httpClient.put<any>(this.URL + `actualizar/${id}`, experiencia);
   }
 
-  public borrar(id: number): Observable<any>{
+  public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
   }
 }

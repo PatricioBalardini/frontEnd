@@ -7,18 +7,18 @@ import { IngresarUsuario } from '../model/ingresar-usuario';
 import { NuevoUsuario } from '../model/nuevo-usuario';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  URL = environment.URL +'auth/';
+  URL = environment.URL + 'auth/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
- public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-   return this.httpClient.post<any>(this.URL + 'nuevo', nuevoUsuario);
- }
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
+    return this.httpClient.post<any>(this.URL + 'nuevo', nuevoUsuario);
+  }
 
-public ingresar(ingresarUsuario: IngresarUsuario): Observable<JwtDto>{
-  return this.httpClient.post<JwtDto>(this.URL + 'ingresar', ingresarUsuario)
- }
+  public ingresar(ingresarUsuario: IngresarUsuario): Observable<JwtDto> {
+    return this.httpClient.post<JwtDto>(this.URL + 'ingresar', ingresarUsuario);
+  }
 }

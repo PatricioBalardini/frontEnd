@@ -6,18 +6,21 @@ import { TokenService } from 'src/app/service/token.service';
 @Component({
   selector: 'app-hys',
   templateUrl: './hys.component.html',
-  styleUrls: ['./hys.component.css']
+  styleUrls: ['./hys.component.css'],
 })
 export class HysComponent implements OnInit {
-
   skill: Skill[] = [];
 
-  constructor(private skillS: SkillService, private tokenService: TokenService) { }
+  constructor(
+    private skillService: SkillService,
+    private tokenService: TokenService
+  ) {}
+
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarSkills();
-    if(this.tokenService.getToken()) {
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
@@ -25,24 +28,21 @@ export class HysComponent implements OnInit {
   }
 
   cargarSkills(): void {
-    this.skillS.lista().subscribe(
-      data => {
-        this.skill = data;
-      }
-    )
+    this.skillService.lista().subscribe((data) => {
+      this.skill = data;
+    });
   }
 
   borrar(id: number) {
-    if(id != undefined) {
-      this.skillS.borrar(id).subscribe(
-        data => {
+    if (id != undefined) {
+      this.skillService.borrar(id).subscribe(
+        (data) => {
           this.cargarSkills();
-        }, err => {
-          alert("No se pudo borrar la skill");
+        },
+        (err) => {
+          alert('No se pudo borrar la skill');
         }
-      )
-
-      }
+      );
     }
   }
-
+}

@@ -1,16 +1,25 @@
 <div class="row">
-
   <h2>Hard & Soft skills</h2>
   <div class="col-lg-2">
-    <button type="button" routerLink="/nuevaskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+    <button
+      type="button"
+      routerLink="/nuevaskill"
+      class="btn btn-outline-success btn-sm"
+      *ngIf="isLogged"
+    >
+      Agregar Skill
+    </button>
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">
+  <div
+    class="text-center col-sm-4 col-md-4 col-lg-4"
+    *ngFor="let skill of skill"
+  >
     <circle-progress
-      [percent]="(skill.porcentaje)"
+      [percent]="skill.porcentaje"
       [radius]="70"
       [imageSrc]="''"
-      [title]="(skill.nombre)"
-      [titleColor]="'#44kksrr'"
+      [title]="skill.nombre"
+      [titleColor]="'#575c6c'"
       [showImage]="true"
       [imageHeight]="50"
       [imageWidth]="50"
@@ -25,12 +34,13 @@
       [animationDuration]="1000"
     ></circle-progress>
     <td *ngIf="isLogged">
-      <button class="btn btn-light" routerLink="/editarhys/{{ skill.id }}">
+      <button class="btn btn-outline-warning btn-sm" routerLink="/editarskill/{{ skill.id }}">
         <i class="bi bi-pencil-fill"></i>
       </button>
+
     </td>
     <td *ngIf="isLogged">
-      <button class="btn btn-danger" (click)="borrar(skill.id)">
+      <button class="btn btn-outline-danger btn-sm" (click)="borrar(skill.id)">
         <i class="bi bi-trash-fill"></i> BORRAR
       </button>
     </td>

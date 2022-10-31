@@ -1,13 +1,11 @@
-.row{
+.row {
   background-color: rgb(17, 17, 17);
   padding: 20px;
   text-align: center;
-
 }
 
-h2{
+h2 {
   color: #f6f6f6;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 25px;
-  
 }
